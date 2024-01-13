@@ -20,6 +20,9 @@ class BaseModel:
         """
 
         timeFormat = "%Y-%m-%dT%H:%M:%S.%f"
+        self.created_at = datetime.now()
+        self.updated_at = datetime.now()
+        self.id = str(uuid.uuid4())
 
         if kwargs:
             for key, value in kwargs.items():
@@ -29,10 +32,6 @@ class BaseModel:
                     setattr(self, key, datetime.strptime(value, timeFormat))
                 else:
                     setattr(self, key, value)
-        else:
-            self.created_at = datetime.now()
-            self.updated_at = datetime.now()
-            self.id = str(uuid.uuid4())
 
         models.storage.new(self)
     
