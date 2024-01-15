@@ -34,14 +34,14 @@ class BaseModel:
                     setattr(self, key, value)
 
         models.storage.new(self)
-    
+
     def save(self):
         """This updates the public instance attribute
         updated_at with the current datetime
         """
         self.updated_at = datetime.now()
         models.storage.save()
-    
+
     def __str__(self):
         """
         return the str representation in a specific format
@@ -54,8 +54,8 @@ class BaseModel:
         returns the dictionary conatining all key value of the instance
         """
         dic = self.__dict__.copy()
-        dic["__class__"] = self.__class__.__name__   
+        dic["__class__"] = self.__class__.__name__
         dic["updated_at"] = self.updated_at.isoformat()
         dic["created_at"] = self.created_at.isoformat()
-        
+
         return dic

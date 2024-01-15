@@ -30,8 +30,10 @@ class testBaseModel(unittest.TestCase):
         self.assertIsInstance(my_model_dic, dict)
         self.assertEqual(my_model_dic["__class__"], 'BaseModel')
         self.assertEqual(my_model_dic['id'], my_model.id)
-        self.assertEqual(my_model_dic['updated_at'], my_model.updated_at.isoformat())
-        self.assertEqual(my_model_dic['created_at'], my_model.created_at.isoformat())
+        self.assertEqual(my_model_dic['updated_at'],
+                         my_model.updated_at.isoformat())
+        self.assertEqual(my_model_dic['created_at'],
+                         my_model.created_at.isoformat())
 
     def test_str(self):
         my_model = BaseModel()
@@ -40,7 +42,6 @@ class testBaseModel(unittest.TestCase):
         self.assertIn(my_model.id, str(my_model))
         self.assertIn(str(my_model.__dict__), str(my_model))
 
-if __name__ =="__main__":
+
+if __name__ == "__main__":
     unittest.main()
-
-

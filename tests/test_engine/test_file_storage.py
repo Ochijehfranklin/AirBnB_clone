@@ -30,6 +30,3 @@ class TestFileStorage_instantiation(unittest.TestCase):
 
     def test_storage_initializes(self):
         self.assertEqual(type(models.storage), FileStorage)
-
-
-

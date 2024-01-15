@@ -101,8 +101,8 @@ class TestUser_save(unittest.TestCase):
     def tearDown(self):
         try:
             os.remove("file.json")
-        except IOError:    pass
-        
+        except IOError:
+            pass
         try:
             os.rename("tmp", "file.json")
         except IOError:
