@@ -1,5 +1,11 @@
 /*Style for the filters*/
 
+.container {
+  max-width: 1000px;
+  margin: 30px 0;
+  text-align: center;
+}
+
 .filters {
   background-color: white;
   height: 70px;
@@ -14,12 +20,12 @@
   color: #ffffff;
   height: 48px;
   width: 20%;
-  border: none;
+  border: 0;
   border-radius: 4px;
   float: right;
   position: relative;
-  top: 11px;
   right: 30px;
+  top: 11px;
 }
 
 .filters button:hover {
@@ -31,6 +37,7 @@
 .amenities {
   height: 100%;
   width: 25%;
+  float: left;
 }
 
 .locations {
@@ -40,10 +47,14 @@
 .locations h3,
 .amenities h3 {
   font-weight: 600;
+  margin: 20px 0 0 30px;
+  text-align: left;
 }
 
 .locations h4,
 .amenities h4 {
   font-weight: 400;
   font-size: 14px;
+  margin: 3px 0 0 30px;
+  text-align: left;
 }
