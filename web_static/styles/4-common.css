@@ -1,0 +1,7 @@
+/*For the body and container styles*/
+
+.container {
+  max-width: 1000px;
+  margin: 30px 0;
+  text-align: center;
+}
